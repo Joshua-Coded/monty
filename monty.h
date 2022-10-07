@@ -1,12 +1,13 @@
+
 #ifndef __MONTY_H__
 #define __MONTY_H__
 
 
-/* <--------------To be able to use getline func----------------> */
+/* --------------To be able to use getline func---------------- */
 
 #define  _POSIX_C_SOURCE 200809L
 
-/*< ============================================================> */
+/* ============================================================ */
 
 
 
@@ -35,9 +36,9 @@
  */
 typedef struct stack_s
 {
-int n;
-struct stack_s *prev;
-struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /* ================================================================ */
@@ -56,8 +57,8 @@ struct stack_s *next;
  */
 typedef struct instruction_s
 {
-char *opcode;
-void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /* ================================================================ */
@@ -74,8 +75,8 @@ void (*f)(stack_t **stack, unsigned int line_number);
  */
 typedef struct global_s
 {
-int err_status;
-char *toks_num;
+	int err_status;
+	char *toks_num;
 } global_t;
 
 extern global_t global;
